@@ -8,6 +8,20 @@ To get started, check out the repository and inspect the code.
 
 ####Part 1: Optimize PageSpeed Insights score for index.html
 
+Here is a list of the optimizations that were made from the original version to get rid
+of some of the bottleneck and jank.
+
+The first and main changes that i made was the calling of of the css files at the beggining of the main index.html page.
+I took the print css file and added a media query attribute to in order to prevent it from having to load every time the website has to load.
+The second change that I made to the index.html file was the google font that was being downloaded. There was a problem with how it was being called. I used the link format to download the font more efficiently.
+
+The second document that got a lot of changes was the main javascript file for the pizza website.
+Many of the loops were causing bottleneck so where the variables were being called and what was being located in the loop had to change. the big changes had to be with the transition between the different sizes of the pizza.
+
+The third and final change that was made was the background pizzas and what they were doing.
+The major changes that were made to the backgournd was putting it on a different layer than the main content of the page. The second change was how many background pizzas there were and how smoothly they were transitioning.
+
+
 Some useful tips to help you get started:
 
 1. Check out the repository
@@ -32,7 +46,7 @@ Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
